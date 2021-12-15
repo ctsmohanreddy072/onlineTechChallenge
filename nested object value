@@ -1,0 +1,15 @@
+To get a value from a nested object:
+Here,  I’m using lodash to fetch the key from the nested object
+I’ll ensure that I have the lodash installed in my machine. Since I used npm to install lodash, I’ll have node.js and npm available in my machine
+Object = {“a1”:{“b1”:”{“c1”:”d1”}”}}
+Key =a1/b1/c1
+Object = {“x1”:{“y1”:”{“z1”:”a1”}”}}
+Key = x1/y1/z1
+Now, I’ll add the following and save it as runtest.js
+Var _ =  require (‘lodash’);
+Var object = {“a1”:{“b1”:”{“c1”:”d1”}”}}
+Var result = _.get (object, [‘a1’, ‘b1’, ‘c1’]);
+Console.log(result);
+Now, execute it like as node runtest.js
+
+The output should display as d1
